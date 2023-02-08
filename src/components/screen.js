@@ -1,8 +1,12 @@
 import React from 'react'
+import "./screen.css"
 
 function screen() {
   return (
-    <div>screen</div>
+    <div className='screen'>
+
+        Screen
+    </div>
   )
 }
 

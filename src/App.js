@@ -4,8 +4,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import  Screen from "./components/screen";
+// import  Screen from "./components/screen";
+import Calculator from "./pages/Calculator";
 import './App.css';
+// import Calculator from "./pages/Calculator";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
 
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Screen />}/>
+      <Route path="/" element={<Calculator />}/>
         
         
     </Routes>
