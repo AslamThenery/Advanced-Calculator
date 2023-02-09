@@ -1,7 +1,7 @@
 .calc-container{
     width: 100%;
     height: 100vh;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 .calculator{
     width: 30%;
-    height: 80vh;
+    height: 90vh;
     background-color: white;
 
 }
@@ -28,6 +28,6 @@
     .calculator{
         width: 100%;
     height: 92vh;
-    background-color: white;
+    background-color: black;
     }
 }

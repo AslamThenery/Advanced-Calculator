@@ -1,6 +1,7 @@
 import React from 'react'
-// import Screen from '../components/screen'
+import Screen from '../components/screen'
 import Header from '../components/Header'
+import Keys from '../components/Keys'
 import "./calculator.css"
 
 function Calculator() {
@@ -9,7 +10,8 @@ function Calculator() {
       <div className="calculator">
 
       <Header />
-        {/* <Screen/> */}
+        <Screen/>
+        <Keys />
       </div>
     </div>
   )

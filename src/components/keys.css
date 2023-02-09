@@ -1,0 +1,61 @@
+.keys{
+    background-color: #1C2D46;
+    height: 60vh;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.number-btn{
+    width: 4em;
+    height: 4em;
+    margin:0.5em;
+    border-radius:5px ;
+    background-color: #1C2D46;
+    /* background-color: aqua; */
+    outline: none;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;   
+    /* box-shadow: 5px 5px 5px 5px gray;   */
+    
+}
+.number-btn:hover{
+    background-color: #ff7e00;
+}
+.row-1{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 20%;
+    
+    background-color: #1C2D46;
+}
+
+/* OPERATIOAL BUTTONS DESIGN */
+.row-5{
+    background: rgb(255,8,0);
+    background: linear-gradient(360deg, rgba(255,8,0,1) 73%, rgba(255,126,0,1) 100%);
+    border-radius: 50PX;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    margin:10px ;
+    width: 15%;
+    /* padding-right: 30px; */
+}
+
+.row-5 .number-btn{
+    outline: none;
+    border: none;
+    color: #ffff;
+    /* background-color: #FF0800; */
+    background: none;
+    /* background-color: aqua; */
+    /* border-radius: 50PX; */
+    font-size: .98em;
+    /* background-color: none; */
+    margin-left: 1px;
+    margin-bottom: 4px;
+
+}
