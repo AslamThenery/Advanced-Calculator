@@ -1,0 +1,56 @@
+.converter{
+    width: 100%;
+    height: 18vh;
+    background:#1C2D46;
+    /* background-color: #FF0800; */
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* DESIGNING LABEL */
+label{
+    color: #ffff;
+    outline: none;
+    border: none;
+    background-color: #1C2D46;
+}
+
+/* OPTION INPUT DESINGNING */
+select{
+    border: #FF0800 1px solid;
+    outline: none;
+    /* background-color: red; */
+    background-color: #1C2D46;
+    color: #ffff;
+}
+/* DESIGN FROM CONTENTS */
+.from{
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+.to{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.converter input {
+    outline: none;
+    margin-top: 0.5rem;
+    width: 80%;
+    height: 2rem;
+}
+/* CONVERT BUTTON DESIGNING */
+.convert-btn{
+    margin-top: 3.5rem;
+    margin-right: 1rem;
+    background-color:#FF0800 ;
+    outline: none;
+    border: none;
+    border: 2px solid #FF0800 ;
+    color: #ffff;
+    height: 2rem;
+    width: 4rem;
+    cursor: pointer;
+
+}

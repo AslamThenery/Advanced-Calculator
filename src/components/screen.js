@@ -1,13 +1,21 @@
-import React from 'react'
+import { React, useContext } from 'react'
+
 import "./screen.css"
 
-function screen() {
-  return (
-    <div className='screen'>
+function Screen() {
 
-        Screen
-    </div>
-  )
+    // const { value, setVAlue, converter } = useContext(calcContext)
+
+    return (
+        <div className='screen'>
+
+            {/* <p style={{color:"red"}}>{value}</p> */}
+
+
+
+
+        </div>
+    )
 }
 
-export default screen
+export default Screen;
