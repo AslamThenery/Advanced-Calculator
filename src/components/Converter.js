@@ -1,52 +1,111 @@
-import React from 'react'
+import { React, useState, useContext } from 'react'
+import { calcContext } from '../pages/CalcContext'
 import "./converter.css"
 
 function Converter() {
+   const {units , value} =useContext(calcContext)
+
+  
+  const [areas, setAreas] = useState(["Square Meter", "Square KiloMeter", "Square MilliMeter", "Square CentiMeter", "Square MicroMeter", "Hector", 'Acre', "Are", "Cent"])
+  const [length, setLenght] = useState(["Meter", "Millimeter", "Centimeter", "Feet", "Kilometer", "Mile", "Inch"])
+  const [volume, setVolume] = useState(["Cubic Meter", "Cubic Millimeter", "Cubic Centimeter", "Liter", "Milliliter", "Mile", "Inch"])
+  const [time, setTime] = useState(["Second", "Millisecond", "Microsecond", "Minute", "Hour", "Day", "Week", "Month", "Year"])
+  const [weight, setWeight] = useState(["Kilogram", "Gram", "Ton", "Pound", "Ounce", "Carrat", "Metric Ton", "Month", "Year"])
+  
+  
+  
   return (
-    <div  className='converter'>
-<div className="from">
-     <label for="optns">From:</label>
-       <br />
-<select id="cars">
-  <option value="volvo">Square Meter</option>
-  <option value="volvo">Square KiloMeter</option>
-  <option value="volvo">Square MilliMeter</option>
-  <option value="volvo">Square CentiMeter</option>
-  <option value="volvo">Square MicroMeter</option>
-  <option value="volvo">Hector</option>
-  <option value="volvo">Acre</option>
-  <option value="volvo">Are</option>
-  <option value="volvo">Cent</option>
-  
-</select>
-   <br />
-    <input type="text" />
-</div>
 
-<div className="convert">
-    <button className='convert-btn'>Convert</button>
-</div>
-<div className="to">
-     <label for="optns">To:</label>
-     <br />
+    <div className='converter'>
+      <div className="from">
+        <label for="optns">From:</label>
+        <br />
+        <select id="cars">
+        { units == "Area" && areas.map((options) => (
 
-<select id="cars">
-  <option value="volvo">Square Meter</option>
-  <option value="volvo">Square KiloMeter</option>
-  <option value="volvo">Square MilliMeter</option>
-  <option value="volvo">Square CentiMeter</option>
-  <option value="volvo">Square MicroMeter</option>
-  <option value="volvo">Hector</option>
-  <option value="volvo">Acre</option>
-  <option value="volvo">Are</option>
-  <option value="volvo">Cent</option>
-  
-</select>
-   <br />
-    <input type="text" />
-</div>
+            <option value="volvo">{options}</option>
+          ))
 
-</div>
+        
+          
+          }
+        { units == "Length" && length.map((options) => (
+
+            <option value="volvo">{options}</option>
+          ))
+
+        
+          
+          }
+        { units == "Volume" && volume.map((options) => (
+
+            <option value="volvo">{options}</option>
+          ))
+          }
+        { units == "Weight" && weight.map((options) => (
+
+            <option value="volvo">{options}</option>
+          ))
+          }
+        { units == "Time" && time.map((options) => (
+
+            <option value="volvo">{options}</option>
+          ))
+          }
+          
+
+
+        </select>
+        <br />
+        <input type="text" value={value} />
+      </div>
+
+      <div className="convert">
+        <button className='convert-btn'>Convert</button>
+      </div>
+      <div className="to">
+        <label for="optns">To:</label>
+        <br />
+
+        <select id="cars">
+        { units == "Area" && areas.map((options) => (
+
+<option value="volvo">{options}</option>
+))
+
+
+
+}
+{ units == "Length" && length.map((options) => (
+
+<option value="volvo">{options}</option>
+))
+
+
+
+}
+{ units == "Volume" && volume.map((options) => (
+
+<option value="volvo">{options}</option>
+))
+}
+{ units == "Weight" && weight.map((options) => (
+
+<option value="volvo">{options}</option>
+))
+}
+{ units == "Time" && time.map((options) => (
+
+<option value="volvo">{options}</option>
+))
+}
+
+        </select>
+        <br />
+        <input type="text" />
+      </div>
+
+    </div>
 
   )
 }

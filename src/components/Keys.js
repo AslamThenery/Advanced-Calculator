@@ -4,7 +4,7 @@ import { calcContext } from '../pages/CalcContext'
 import "./keys.css"
 
 function Keys() {
- const {value, setValue, converter, setConverter } = useContext(calcContext)
+ const {value, setValue, converter, setUnits, units } = useContext(calcContext)
 
  const keys =[]  
 
@@ -12,9 +12,21 @@ function Keys() {
  const handleKeys =  (e) =>{
 
      keys.push(e.target.value)
-      setValue([...value, keys])
-      console.log("values are ")
-      console.log(typeof(value))
+     console.log("values are ")
+     let data = e.target.value
+     console.log(data)
+     if( data === "Area"|| data === "Volume" || data === "Length" || data === "Time"|| data === "Weight"){
+       
+       console.log("If working");
+       console.log(data);
+       setUnits(data)
+       console.log(units);
+      }
+      else{
+        // setValue([...value, keys])
+        setValue(value + data)
+        console.log("Not working");
+      }
  
   }
   //  CLEARING SCREEN
@@ -32,11 +44,11 @@ function Keys() {
        
 
         <div className="row-1">
-        <button className='number-btn' value="sin" onClick={handleKeys}>{converter ? "Back" : 'sin'}</button>
-        <button className='number-btn' value="cos" onClick={handleKeys}>{converter ? "Area" : 'cos'}</button>
-        <button className='number-btn' value="tan" onClick={handleKeys}>{converter ? "Length" : 'tan'}</button>
-        <button className='number-btn' value="√" onClick={handleKeys}>{converter ? "Volume" : '√'}</button>
-        <button className='number-btn' value="π" onClick={handleKeys}>{converter ? "Time" : 'π'}</button>
+        <button className='number-btn' value={converter ? "Weight" : 'sin'} onClick={handleKeys}>{converter ? "Weight" : 'sin'}</button>
+        <button className='number-btn' value={converter ? "Area" : 'cos'} onClick={handleKeys}>{converter ? "Area" : 'cos'}</button>
+        <button className='number-btn' value={converter ? "Length" : 'tan'} onClick={handleKeys}>{converter ? "Length" : 'tan'}</button>
+        <button className='number-btn' value={converter ? "Volume" : '√'} onClick={handleKeys}>{converter ? "Volume" : '√'}</button>
+        <button className='number-btn' value={converter ? "Time" : 'π'} onClick={handleKeys}>{converter ? "Time" : 'π'}</button>
 
         </div>
         <div className="row-1">

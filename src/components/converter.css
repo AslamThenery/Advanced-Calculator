@@ -29,15 +29,19 @@ select{
 .from{
     margin-left: 0.5rem;
     margin-top: 1rem;
+    /* background-color: yellow; */
+    width: 10rem;
 }
 .to{
     margin-top: 1rem;
     margin-left: 1rem;
+    /* background-color: black; */
+    width: 40%;
 }
 .converter input {
     outline: none;
     margin-top: 0.5rem;
-    width: 80%;
+    width: 9rem;
     height: 2rem;
 }
 /* CONVERT BUTTON DESIGNING */
